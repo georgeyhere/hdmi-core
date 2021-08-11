@@ -1,5 +1,5 @@
 # hdmi-core
- HDMI IP
+![HDMI IP](docs/top.png)
 
 A basic HDMI IP core. Takes 8-bit RGB as inputs, outputs TMDS channels. Pixel clock is encoded as o_TMDS_P and o_TMDS_N [3]. 
 
