@@ -5,3 +5,5 @@ A basic HDMI IP core. Takes 8-bit RGB as inputs, outputs TMDS channels. Pixel cl
 
 Tested on Zybo Z7-20, used in Bronco Pong class project. To use, just add the ip folder path to Vivado IP Repositories.
 
+
+[![Demo](https://img.youtube.com/vi/_cfxz9SJ9kk/0.jpg)](https://www.youtube.com/watch?v=_cfxz9SJ9kk)
