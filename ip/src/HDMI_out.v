@@ -24,6 +24,7 @@ module HDMI_out(
     input        i_p_clk,
     input        i_tmds_clk,
     input        i_resetn,
+    
     input  [9:0] i_tmds_red,
     input  [9:0] i_tmds_green,
     input  [9:0] i_tmds_blue,

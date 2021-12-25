@@ -1,13 +1,34 @@
+//
+//
+/*
+	**** INSTANTIATION TEMPLATE ****
+	
+HDMI_top HDMI_i (
+.i_p_clk       (), // pixel clock
+.i_tmds_clk    (), // 10x pixel clock
+.i_resetn      (), // sync active low reset
 
+// 24-bit RGB
+.i_rgb         (), // r[7:0], g[15:8], b[23:16]
+ 
+// VTC   
+.i_vsync       (),
+.i_hsync       (),
+.i_active_area (),
+
+// HDMI interface
+.o_TMDS_P      (),
+.o_TMDS_N      ()
+);
+
+*/
 module HDMI_top 
 	(
 	input  wire        i_p_clk,
 	input  wire        i_tmds_clk,
 	input  wire        i_resetn,
   
-	input  wire [7:0]  i_red,
-	input  wire [7:0]  i_green,
-	input  wire [7:0]  i_blue,
+	input  wire [23:0] i_rgb,
   
 	input  wire        i_vsync,
 	input  wire        i_hsync,
@@ -26,9 +47,9 @@ module HDMI_top
 	.i_p_clk        (i_p_clk       ),
 	.i_resetn       (i_resetn      ),
          
-	.i_red          (i_red         ),
-	.i_green        (i_green       ),
-	.i_blue         (i_blue        ),
+	.i_red          (i_rgb[7:0]    ),
+	.i_green        (i_rgb[15:8]   ),
+	.i_blue         (i_rgb[23:16]  ),
          
 	.i_vsync        (i_vsync       ),
 	.i_hsync        (i_hsync       ),
